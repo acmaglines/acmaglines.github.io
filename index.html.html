@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angelo Christian Maglines | Personal Profile</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap');
+       
+        :root {
+            --primary: #2A3B4D;
+            --accent: #C48B6A;
+            --light: #F8F4F0;
+        }
+       
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+       
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+       
+        /* Header */
+        header {
+            background: white;
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+       
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(42, 59, 77, 0.75), rgba(42, 59, 77, 0.75)), url('https://img.sanishtech.com/u/bca91a6d9b65918852b572d7c9d9ccf3.webp');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 5% 80px;
+            text-align: center;
+        }
+        .hero-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+        .cta-btn {
+            background: white;
+            color: var(--primary);
+            padding: 14px 40px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+       
+        /* Stats */
+        .stats {
+            background: var(--primary);
+            color: white;
+            padding: 60px 5%;
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            flex-wrap: wrap;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 700;
+        }
+       
+        /* About */
+        .about {
+            padding: 100px 5%;
+            background: var(--light);
+        }
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+       
+        /* Everest Section */
+        .everest {
+            padding: 100px 5%;
+        }
+        .everest-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .content-side h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+       
+        /* Video Styles */
+        .video-container {
+            max-width: 900px;
+            margin: 40px auto;
+            text-align: center;
+        }
+        video {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+       
+        /* Photo Story */
+        .photo-story {
+            padding: 100px 5%;
+            background: white;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+       
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 60px 5% 30px;
+        }
+       
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .everest-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">ANGELO</div>
+            <div class="nav-links">
+                <a href="#about">About Me</a>
+                <a href="#everest">Mt. Everest</a>
+                <a href="#story">My Story</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hello, I'm Angelo Christian Maglines</h1>
+            <p>High school student passionate about coding, design, technology, and capturing life's beautiful moments.</p>
+            <button onclick="document.getElementById('story').scrollIntoView({behavior: 'smooth'})" class="cta-btn">
+                Explore My World
+            </button>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="stat-item">
+            <div class="stat-number">6+</div>
+            <p>Hobbies</p>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <p>Passion for Tech</p>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">∞</div>
+            <p>Creativity</p>
+        </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <p style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.2rem;">
+            Hello, my name is <strong>Angelo Christian Maglines</strong>. I am a high school student who enjoys learning coding and improving my skills.
+            I love technology, creativity — especially arts — and spending time with friends and family.
+        </p>
+       
+        <div style="max-width: 800px; margin: 60px auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+            <div>
+                <h3>My Hobbies</h3>
+                <ul style="margin-top: 15px; line-height: 2;">
+                    <li>Playing Mobile Games</li>
+                    <li>Watching Movies</li>
+                    <li>Listening to Music</li>
+                    <li>Browsing the Internet</li>
+                    <li>Sketching Art</li>
+                    <li>Cleaning</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Fun Facts</h3>
+                <p style="margin-top: 15px;">
+                    <strong>Favorite Color:</strong> Black<br>
+                    <strong>Favorite Food:</strong> Fried Chicken<br>
+                    <strong>Dream Job:</strong> Game Developer / Graphics Designer
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mt. Everest -->
+    <section id="everest" class="everest">
+        <h2 class="section-title">Welcome to Mt. Everest</h2>
+        <div class="everest-grid">
+            <div>
+                <img src="https://img.sanishtech.com/u/49eacd59d3723a76f7b08af8c8460fc1.webp" alt="Mt Everest" style="width:100%; border-radius: 12px; box-shadow: 0 15px 35px rgba(0,0,0,0.15);">
+            </div>
+            <div class="content-side">
+                <h2>Description</h2>
+                <p>Mount Everest is the highest mountain in the world. It is located in the Himalayas, on the border between Nepal and China. Standing at 8,848.86 meters (29,031 feet), it is one of the most challenging and famous mountains to climb.</p>
+               
+                <h2 style="margin-top: 30px;">History</h2>
+                <p>Mount Everest was first climbed on May 29, 1953 by Sir Edmund Hillary and Tenzing Norgay.</p>
+               
+                <h2 style="margin-top: 30px;">Top Attractions</h2>
+                <ol style="margin-top: 15px;">
+                    <li>Everest Base Camp (5,364m)</li>
+                    <li>Kala Patthar Viewpoint</li>
+                    <li>Khumbu Icefall</li>
+                    <li>South Col Route</li>
+                    <li>Summit of Mount Everest</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Story Through Pictures + Video -->
+    <section id="story" class="photo-story">
+        <h2 class="section-title">My Story Through Pictures & Video</h2>
+       
+        <!-- Video Section -->
+        <div class="video-container">
+            <video controls autoplay muted loop>
+                <source src="https://videotourl.com/videos/1782107462424-c8dd9ef9-c3aa-48ee-8e9e-b19df28ae59e.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p style="margin-top: 15px; font-size: 1.1rem; color: #555;">
+                Watch my video story
+            </p>
+        </div>
+
+        <!-- Photo Section -->
+        <div style="max-width: 900px; margin: 60px auto 0; text-align: center;">
+            <img src="https://img.sanishtech.com/u/168b42f14beab0891db78de0c4007a61.jpg" alt="School Hallway" style="max-width: 100%; border-radius: 12px; box-shadow: 0 15px 35px rgba(0,0,0,0.15);">
+           
+            <h3 style="margin: 40px 0 20px;">My Reflection</h3>
+            <p>Today I took this <strong>photo</strong> of the school hallway during lunch break. The long empty corridor with the colorful walls made me feel peaceful and inspired. This simple moment reminded me how beautiful ordinary places can be when we take time to notice them.</p>
+           
+            <p style="margin-top: 20px;">
+                Walking through this hallway every day, I usually rush to class without looking around. But today I stopped and captured this image. It made me realize that life is full of small beautiful moments.
+            </p>
+        </div>
+
+        <div class="gallery">
+            <div class="program-card">
+                <div class="program-content">
+                    <h3>Events Related to This Photo</h3>
+                    <ul>
+                        <li>During break I decided to walk around the school</li>
+                        <li>I saw the beautiful lighting in the hallway</li>
+                        <li>I took several photos from different angles</li>
+                        <li>I chose this photo and saved it for my HTML project</li>
+                        <li>I went back to class feeling more creative</li>
+                    </ul>
+                </div>
+            </div>
+           
+            <div class="program-card">
+                <div class="program-content">
+                    <h3>Things Visible in the Photo</h3>
+                    <ul>
+                        <li>Long empty school hallway</li>
+                        <li>Yellow and blue painted walls</li>
+                        <li>Shiny floor</li>
+                        <li>Doors of classrooms</li>
+                        <li>Ceiling lights</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <footer id="contact">
+        <h2 style="color: white;">Contact Information</h2>
+        <p style="margin: 20px 0;">Email: acmaglines29@gmail.com</p>
+        <p>Facebook: Ac maglines</p>
+        <p style="margin-top: 40px; opacity: 0.7;">© 2026 Angelo Christian Maglines • Built with passion</p>
+    </footer>
+</body>
+</html>
